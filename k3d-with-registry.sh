@@ -31,7 +31,6 @@ for cluster in $(k3d ls 2>/dev/null | tail -n +4 | head -n -1 | awk '{print $2}'
 done
 
 echo "$@"
-echo "k3d create --enable-registry --name=${CLUSTER_NAME} ${$@}"
 k3d create --enable-registry "$@"
 
 echo
