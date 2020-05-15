@@ -32,7 +32,7 @@ done
 
 echo "$@"
 echo "k3d create --enable-registry --name=${CLUSTER_NAME} ${$@}"
-k3d create --enable-registry --name=${CLUSTER_NAME} "$@"
+k3d create --enable-registry "$@"
 
 echo
 echo "Waiting for Kubeconfig to be ready..."
